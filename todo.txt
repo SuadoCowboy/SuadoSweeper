@@ -1,0 +1,53 @@
+!! BEFORE IMPLEMENTING MULTIPLAYER YOU NEED TO SEE WHAT WILL BE SERVER-SIDE AND CLIENT-SIDE AND HOW WILL SINGLEPLAYER WORK
+- SEARCH ABOUT PORT FORWARDING
+
+- SINGLEPLAYER
+- - the game the way it is right now
+
+- MULTIPLAYER
+- - everyone see their cursors
+- - a placeholder for their username
+- - a scoreboard about who flagged more(at the end it reveals which one had the most correct flags)
+- - add a time mode
+
+- IMPLEMENT THE MULTIPLAYER MODE!!!!
+- - ver o mouse de cada um(talvez cores diferentes ou sla)(COM PLACEHOLDER DE NOME EM BAIXO BEM PEQUENO)
+
+- FIND GOOD BACKGROUND MUSICS FOR THE THEME! GOOD AND CASUAL BACKGROUND MUSIC
+- background is strange... maybe i should remove it
+
+### NO FINAL ###
+- GITHUB PAGE (already exists, UPDATE IT)!
+- - CREATE THE DOCS
+- - GAME UPDATER
+
+- put a icon related to Minesweeper and myself(SuadoSweeper)
+- put a free use license(something that allows EVERYTHING, EXCEPT cheat in multiplayer plwease(talk with someone who understand licenses))
+
+### TEST WITH FRIENDS ###
+racist list:
+- Chrry
+- FadingDrake555
+- .Monini!
+- Nw
+- Fahel
+- h4h4 bolas
+- Servidor Geraldo(?)
+
+Grupos sociais para que ninguem se foda:
+
+- Chrry & eu (ta mt racista)
+
+- .Monini & eu
+
+- Nw, Fahel & eu
+
+- h4h4 bolas, FadingDrake555 & eu
+
+- Servidor geraldo vai ser só no final
+
+# FUTURE
+- map creator(another program)
+- maps can have random flags
+
+- create a good tutorial, with bubble messages and tf2 soldier; sfx when the bubble changes, and also a mini "jump" animation with the bubble and the soldier

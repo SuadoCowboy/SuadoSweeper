@@ -1,0 +1,13 @@
+{
+    "x_amount":12,
+    "y_amount":22,
+
+    "air_tiles_indexes":[],
+    
+    "bombs_amount":12,
+    
+    "default_lives":2,
+    "lives":2,
+    
+    "random":true
+}
