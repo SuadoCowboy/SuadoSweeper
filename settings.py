@@ -14,7 +14,6 @@ def convert_to_bool(value: str):
     return None
 
 CONFIG_PATH = 'config.ini'
-CUSTOM_PATH = 'custom'
 
 if os.path.exists(CONFIG_PATH):
     # Read config file
@@ -71,6 +70,9 @@ TILE_BLANK_COLOR = config['TILE']['blank_color']
 TILE_FONT_COLOR = config['TILE']['font_color']
 
 SAVES_PATH = 'saves'
+if not os.path.exists(SAVES_PATH):
+    os.makedirs(SAVES_PATH)
+
 ASSETS_PATH = 'assets'
 
 ASSETS = {
@@ -114,6 +116,10 @@ for i in range(3):
 
 for i in range(7):
     ASSETS['audio'][f'won{i+1}'] = os.path.join(ASSETS_PATH,'audio',f'won{i+1}.wav')
+
+CUSTOM_PATH = 'custom'
+if not os.path.exists(CUSTOM_PATH):
+    os.makedirs(CUSTOM_PATH)
 
 if os.path.exists(CUSTOM_PATH):
     for folder in next(os.walk(CUSTOM_PATH))[1]: # dir only
