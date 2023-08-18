@@ -166,10 +166,13 @@ class Game:
 
         self.lost_sound = None
 
-        self.settingsmenu = SettingsMenu(int(HALF_WIDTH*1.5), int(HALF_HEIGHT*1.5), (WIDTH, HEIGHT))
+        self.settingsmenu = SettingsMenu(int(HALF_WIDTH*1.5), int(HALF_HEIGHT*1.5))
         self.settingsmenu.rect.topleft = (HALF_WIDTH-self.settingsmenu.rect.width//2, HALF_HEIGHT-self.settingsmenu.rect.height//2)
 
-        self.radio = Radio(200, 75, (WIDTH, HEIGHT))
+        self.radio = Radio(200, 75)
+
+        self.multiplayer_interface = MultiplayerInterface()
+        self.is_multiplayer = False
 
         self.set_difficulty(LAST_PLAYED_DIFFICULTY) # first difficulty is easy(this function also loads the difficulty)
 
@@ -514,6 +517,9 @@ class Game:
         if self.input_handler.actionDoneOnce('reset offset'):
             self.level.reset_offset_position()
 
+        if self.input_handler.actionDoneOnce('toggle multiplayer_menu'):
+            self.set_mode('multiplayer_menu')
+
         if self.input_handler.actionDoneOnce('toggle changedifficulty_menu'):
             self.update_difficulties()
             for i, difficulty_name in enumerate(DIFFICULTIES):
@@ -603,6 +609,15 @@ class Game:
         if self.input_handler.actionDoneOnce('toggle settings_menu'):
             self.reverse_mode()
 
+    def handle_input_multiplayer_menu(self): # specifying that it is a menu so that people won't get too confused
+        if self.mode == 'no handle_input':
+            return
+        
+        self.multiplayer_interface.update(self.cursor.rect.topleft, self.keyDownEvent, self.mouseButtonDownEvent)
+
+        if self.input_handler.actionDoneOnce('toggle multiplayer_menu'):
+            self.reverse_mode()
+
     def draw_settings(self):
         self.settingsmenu.draw(self.display)
 
@@ -647,6 +662,8 @@ class Game:
         elif self.mode == 'settings_menu': self.handle_input_settings()
 
         elif self.mode == 'radio_menu': self.handle_input_radio()
+
+        elif self.mode == 'multiplayer_menu': self.handle_input_multiplayer_menu()
 
         self.level.update()
 
@@ -713,6 +730,8 @@ class Game:
         elif self.mode == 'settings_menu': self.draw_settings()
         
         elif self.mode == 'radio_menu': self.draw_radio()
+
+        elif self.mode == 'multiplayer_menu': self.multiplayer_interface.draw(self.display)
 
         if self.draw_lost_image:
             if self.lost_cooldown.check() or self.input_handler.keyPressedOnce(pygame.K_ESCAPE):
