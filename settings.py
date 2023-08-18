@@ -32,7 +32,7 @@ else:
     
     config['TILE'] = {'blank_color':'#171717', 'pressed_color':'#202020','font_color':'#ffffff'}
 
-    config['BINDS'] = {'f1':'save', 'f2':'toggle loadgame_menu', 't':'toggle changedifficulty_menu', 'tab':'show scoreboard', 'escape':'toggle settings_menu', 'r':'restart', 'a':'+offset_x', 'd':'-offset_x', 'w':'+offset_y','s':'-offset_y', 'q':'reset offset', 'z':'zoom-','x':'zoom+', 'mouse0': 'press', 'mouse2': 'toggle flag','quote': 'toggle radio_menu'}
+    config['BINDS'] = {'f1':'save', 'f2':'toggle loadgame_menu', 't':'toggle changedifficulty_menu', 'tab':'show scoreboard', 'escape':'toggle settings_menu', 'r':'restart', 'a':'+offset_x', 'd':'-offset_x', 'w':'+offset_y','s':'-offset_y', 'q':'reset offset', 'z':'zoom-','x':'zoom+', 'mouse0': 'press', 'mouse2': 'toggle flag','quote': 'toggle radio_menu','m':'toggle multiplayer_menu'}
     
     config['LOADMENU'] = {'background_color':'#202020', 'border_color':'#ffffff', 'border_width':'2'}
     
