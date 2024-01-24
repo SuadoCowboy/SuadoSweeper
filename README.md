@@ -1,4 +1,5 @@
 # This README.md was more of a todo.txt sort of file
+## Repository archived as I am not focusing much more on python game development these days
 
 idea: multiplayer minesweeper
 
