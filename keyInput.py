@@ -48,7 +48,7 @@ class KeyInputHandler:
         """
         WARNING: This does not work with keyboard, if the user presses f1 or left, it won't work!
         """
-        keysReleased = list(keysPressed)
+        keysReleased = [None for i in range(10000)]
 
         for key in range(len(keysPressedBefore)):
             if keysPressedBefore[key] and not keysPressed[key]:

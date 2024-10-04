@@ -1,53 +1,80 @@
-!! BEFORE IMPLEMENTING MULTIPLAYER YOU NEED TO SEE WHAT WILL BE SERVER-SIDE AND CLIENT-SIDE AND HOW WILL SINGLEPLAYER WORK
-- SEARCH ABOUT PORT FORWARDING
+- create a voting system
 
-- SINGLEPLAYER
-- - the game the way it is right now
+- servers can have their own difficulties and map structures, they must send to each client when they join to download those informations
+
+-- SERVER SIDE
+
+- create a way to send big amount of datas without losing anything
+
+- TCP colored + emojis chat system
+
+- map array
+
+KEYBINDS:
+save - server config must allow or else it will warn that the user can't save the game(it also needs to be at the end), cfg must allow to save midgame if the client wants to do so
+
+restart - create a voting system(create keybinds to press yes/no and also make it functional with mouse)
+press
+toggle flag
+
+-- CLIENT SIDE
+
+KEYBINDS:
+toggle settings_menu
+toggle multiplayer_menu
+toggle radio_menu
+toggle loadgame_menu - will kick the player out if he loads(it will warn the player)
+toggle changedifficulty_menu - will kick the player out if he changes(it will warn the player)
+
++offset_x
+-offset_x
++offset_y
+-offset_y
+reset offset
+
+zoom-
+zoom+
+
+show scoreboard(show people scoreboard, and not your personal record)
+
+#########################
+
+- separate singleplayer modes from multiplayer modes
 
 - MULTIPLAYER
-- - everyone see their cursors
-- - a placeholder for their username
+- - everyone see eachother cursors
+- - placeholders for eachother usernames
 - - a scoreboard about who flagged more(at the end it reveals which one had the most correct flags)
-- - add a time mode
+- - add a time option for the server(if the time goes out, they lose)
+
+- because the game is made mostly for singleplayer,
+most of the stuff will be client-side. The server
+will send when a tile is pressed, and will always
+send players cursors position, it will also send
+the needed stuff to load the map, unfortunately,
+it will be easy to cheat because the client will
+have all the information of the map, but it's
+ok because it is intended to play with friends.
 
 - IMPLEMENT THE MULTIPLAYER MODE!!!!
-- - ver o mouse de cada um(talvez cores diferentes ou sla)(COM PLACEHOLDER DE NOME EM BAIXO BEM PEQUENO)
+- - see each other cursors (maybe with different colors)(WITH A LITTLE PLACEHOLDER WITH THEIR USERNAMES(and also with char length limit))
+- - future: create an UI for multiplayer: name input, color picker with a box representing the color, connect form: ip:port(address) input, password(not required), connect button
 
-- FIND GOOD BACKGROUND MUSICS FOR THE THEME! GOOD AND CASUAL BACKGROUND MUSIC
-- background is strange... maybe i should remove it
+- FIND CASUAL BACKGROUND MUSICS FOR THE THEME!
+- background image is strange... maybe i should remove it
 
-### NO FINAL ###
+### AT THE END ###
 - GITHUB PAGE (already exists, UPDATE IT)!
 - - CREATE THE DOCS
-- - GAME UPDATER
+- - GAME UPDATER (use github to check if the version the client is using is the same as the lastest)
+- - IF IT APPEARS PUBLIC: delete this repo and create another one(hide friends for their own privacy)
 
-- put a icon related to Minesweeper and myself(SuadoSweeper)
-- put a free use license(something that allows EVERYTHING, EXCEPT cheat in multiplayer plwease(talk with someone who understand licenses))
+- remember to update README.md
 
-### TEST WITH FRIENDS ###
-racist list:
-- Chrry
-- FadingDrake555
-- .Monini!
-- Nw
-- Fahel
-- h4h4 bolas
-- Servidor Geraldo(?)
-
-Grupos sociais para que ninguem se foda:
-
-- Chrry & eu (ta mt racista)
-
-- .Monini & eu
-
-- Nw, Fahel & eu
-
-- h4h4 bolas, FadingDrake555 & eu
-
-- Servidor geraldo vai ser só no final
+- put an icon related to minesweeper and myself(SuadoSweeper)
 
 # FUTURE
-- map creator(another program)
-- maps can have random flags
+- map creator(another program -> the output is a pickle file with a map array in it)
+- maps can have random flags(servers can create their own map flag handling system, with a little of programming)
 
 - create a good tutorial, with bubble messages and tf2 soldier; sfx when the bubble changes, and also a mini "jump" animation with the bubble and the soldier
