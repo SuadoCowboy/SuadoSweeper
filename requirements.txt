@@ -1,2 +1,4 @@
 pygame
+configparser
 orjson
+numpy
