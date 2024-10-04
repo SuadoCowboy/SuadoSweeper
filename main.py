@@ -833,4 +833,8 @@ class Game:
 
 if __name__ == '__main__':
 	game = Game()
+<<<<<<< HEAD
 	game.run()
+=======
+	game.run()
+>>>>>>> 91f15f5a687ae3e973afee820e36018b99164593
