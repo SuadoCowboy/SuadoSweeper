@@ -13,7 +13,6 @@ pygame.init()
 pygame.font.init()
 
 class Game:
-<<<<<<< HEAD
     def __init__(self):
         self.display = pygame.display.set_mode((WIDTH, HEIGHT))
 
