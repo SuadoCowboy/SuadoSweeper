@@ -121,14 +121,14 @@ CUSTOM_PATH = 'custom'
 if not os.path.exists(CUSTOM_PATH):
     os.makedirs(CUSTOM_PATH)
 
-if os.path.exists(CUSTOM_PATH):
+else:
     for folder in next(os.walk(CUSTOM_PATH))[1]: # dir only
         folder_path = os.path.join(CUSTOM_PATH, folder)
-        
-        for folder_name in ASSETS:
-            if os.path.exists(os.path.join(folder_path, folder_name)):
-                for filename in os.listdir(os.path.join(folder_path, folder_name)):
-                    ASSETS[folder_name][os.path.splitext(filename)[0]] = os.path.join(folder_path, folder_name, filename)
+
+        if os.path.exists(os.path.join(ASSETS_PATH, folder)):
+            for filename in os.listdir(folder_path):
+                print(filename)
+                ASSETS[folder][os.path.splitext(filename)[0]] = os.path.join(folder_path, filename)
 
 BACKGROUND_PATH = ASSETS['images']['background']
 

@@ -1,3 +1,6 @@
+# This README.md was more of a todo.txt sort of file
+## Repository archived as I am not focusing much more on python game development these days
+
 idea: multiplayer minesweeper
 
 modes: singleplayer; co-op; versus; battle-royale; same modes but in lan(INCLUDING BATTLE ROYALE BECAUSE I KNOW PEOPLE MIGHT USE RADMIN OR SOME SHIT TO PLAY WITH THEIR FRIENDS)

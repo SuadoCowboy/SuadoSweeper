@@ -602,12 +602,12 @@ class SettingsCategory(pygame.Surface):
             self.offsety += mouseWheelY
 
 class SettingsMenu(pygame.Surface):
-    def __init__(self, width: int, height: int, screen_size: tuple[int, int]):
+    def __init__(self, width: int, height: int):
         super().__init__((width, height))
         
         self.rect = self.get_rect()
-        self.rect.x = screen_size[0]/2-width/2
-        self.rect.y = screen_size[1]/2-height/2
+        self.rect.x = WIDTH//2-width//2
+        self.rect.y = HEIGHT//2-height//2
 
         self.background_color = SETTINGSMENU_BACKGROUND_COLOR
         
@@ -757,12 +757,12 @@ class SettingsMenu(pygame.Surface):
 MUSIC_END = pygame.USEREVENT+1
 
 class Radio(pygame.Surface):
-    def __init__(self, width: int, height: int, screen_size: tuple[int, int]):
+    def __init__(self, width: int, height: int):
         super().__init__((width, height))
 
         self.rect = self.get_rect()
-        self.rect.x = screen_size[0]/2-width/2
-        self.rect.y = screen_size[1]/2-height/2
+        self.rect.x = WIDTH/2-width/2
+        self.rect.y = HEIGHT/2-height/2
 
         self.background_color = RADIOMENU_BACKGROUND_COLOR
         self.border_color = RADIOMENU_BORDER_COLOR
